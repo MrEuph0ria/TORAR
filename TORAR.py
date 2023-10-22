@@ -6,9 +6,6 @@ import shutil
 from openpyxl import Workbook
 import sqlite3
 import webbrowser
-
-def intranet():
-    webbrowser.open("10.1.87.254")
 # Inicialize o mecanismo de fala uma vez no início do programa
 engine = pyttsx3.init()
 
@@ -216,8 +213,6 @@ def login():
 
     login_button = tk.Button(login_window, text="Login", command=lambda: verificar_credenciais(usuario_entry, senha_entry))
     login_button.pack()
-    cb = tk.Button(login_window,text="INTRANET", command=lambda:intranet())
-    cb.pack()
     criar_conta_button = tk.Button(login_window, text="Criar Conta", command=checa_admin)
     criar_conta_button.pack()
     erro_label = tk.Label(login_window, text="", fg="red")
